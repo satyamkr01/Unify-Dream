@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "821592377666",
+    "project_id": "unifydream-5d7ed",
+    "storage_bucket": "unifydream-5d7ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821592377666:android:7e6b8bc9832f83d6a2a0db",
+        "android_client_info": {
+          "package_name": "com.eservecloud.unifydream"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDjeNO4RIEHSznGBdRnpHCCt2qOHuyv2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

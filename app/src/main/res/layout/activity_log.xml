@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_log_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ui.LogActivity"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#123d5f"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="close"
+                android:padding="2dp"
+                android:src="@drawable/close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="center_vertical"
+                android:text="Log Activity"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_activity_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="10dp"
+        android:text="Activity Type"
+        android:textStyle="bold"
+        android:textColor="#123d5f"
+        android:textSize="18sp"
+        android:layout_below="@+id/appBarLayout"/>
+
+    <LinearLayout
+        android:id="@+id/ll_activity_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:weightSum="3"
+        android:layout_below="@+id/tv_activity_type">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/meeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            android:layout_weight="1"
+            android:background="@drawable/text_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meeting"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                app:drawableTopCompat="@drawable/calendar"
+                android:padding="10dp"
+                android:layout_gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/phoneCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            android:layout_weight="1"
+            android:background="@drawable/text_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Call"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                app:drawableTopCompat="@drawable/call"
+                android:padding="10dp"
+                android:layout_gravity="center" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/siteVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            android:layout_weight="1"
+            android:background="@drawable/text_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Site Visit"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                app:drawableTopCompat="@drawable/site_visit"
+                android:padding="10dp"
+                android:layout_gravity="center" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_client_name_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Client Name"
+        android:textStyle="bold"
+        android:textColor="#123d5f"
+        android:textSize="18sp"
+        android:layout_below="@+id/ll_activity_type" />
+
+    <TextView
+        android:id="@+id/tv_client_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:text="Aparna Kamath"
+        android:textSize="18sp"
+        android:layout_below="@+id/tv_client_name_header" />
+
+    <TextView
+        android:id="@+id/tv_notes_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Call Notes"
+        android:textStyle="bold"
+        android:textColor="#123d5f"
+        android:textSize="18sp"
+        android:layout_below="@+id/tv_client_name" />
+
+    <EditText
+        android:id="@+id/tv_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/tv_notes_header"
+        android:background="@drawable/text_bg"
+        android:hint="Enter notes" />
+
+    <TextView
+        android:id="@+id/tv_call_recording_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Call Recording"
+        android:textStyle="bold"
+        android:textColor="#123d5f"
+        android:textSize="18sp"
+        android:layout_below="@+id/tv_notes" />
+
+    <RelativeLayout
+        android:id="@+id/rl_upload_recording"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_call_recording_header"
+        android:background="@drawable/text_bg_red"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_upload_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_upload_recording"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/file_upload"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/upload_recording"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:text="Upload Recording"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_play_recording"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/tv_call_recording_header"
+        android:background="@drawable/text_bg_green"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_playRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_play_recording"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white"
+                android:src="@drawable/play_circle"
+                android:contentDescription="TODO" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/play_recording"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Play Recording"
+                    android:textColor="#123d5f"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/recording_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4:23"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/changeRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginVertical="15dp"
+            android:padding="5dp"
+            android:layout_alignParentEnd="true"
+            android:text="Change"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#16b7df"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="Save Activity"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="@drawable/button_bg"/>
+
+</RelativeLayout>

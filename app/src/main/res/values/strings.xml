@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">UnifyDream</string>
+    <string name="forgot_password_msg">Please enter the email associated with your account.</string>
+    <string name="on_submit_msg">Check out your mailbox, you will receive an email containing link where you can reset your password</string>
+
+    <string name="register">Register</string>
+    <string name="create_account">Don\'t have an account?\u0020</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="prompt_password">Enter the password</string>
+    <string name="prompt_email">Enter your email</string>
+    <string name="title_login">Login to your account</string>
+    <string name="image">image</string>
+    <string name="app_header_title">Unified Conversational Engagement Platform</string>
+    <string name="app_sub_header_title">One platform to collaborate &amp; provide multi-channel support to your clients</string>
+    <string name="tnc_msg">By continuing you agree to our <a href="https://www.google.com">terms &amp; conditions</a> and <a href="https://www.google.com">privacy policy</a>.</string>
+    <string name="notification">notification</string>
+    <string name="profile">profile</string>
+    <string name="arrow_down">arrow_down</string>
+    <string name="my_leads_count">My Leads</string>
+    <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="divider">divider</string>
+</resources>
